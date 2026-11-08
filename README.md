@@ -76,18 +76,6 @@
 
 让 AI 给出每个用到的接口在资料中的出处（文件 + 行号），一眼即可核实它没有编造。
 
----
-
-## 实测效果
-
-用本包投喂后，AI 可以做到：
-
-- 对照《迷你世界 3.0 API》逐接口核对一份 1968 行的「枪械升级」脚本的完整功能；
-- 准确指出 `GunAttr.ReloadPhase2Time` 与 `ReloadPhase2TimeEmpty` 是两个独立字段、
-  底层 `ModifyGunAttrNumber(key, value)` 每次只 set 一个字段且没有字段间联动；
-- 给出 `LevelUpEquipOrGunForPlayer` / `EmpowerEquipOrGunForPlayer` 等官方接口的正确参数与调用时机。
-
-（这些结论全部可以在 `core/Item.structured.lua` 与 `迷你世界3.0_api_1.54.txt` 中找到原文依据，不是 AI 猜的。）
 
 ---
 
